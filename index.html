@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>AI Dad Joke Generator</title>
   </head>
   <body>
@@ -18,7 +19,7 @@
         <h1>AI Dad Joke Generator 👴</h1>
       </header>
       <main>
-        <form>
+        <form id="joke-generator-form">
           <input
             type="text"
             class="input"
@@ -27,11 +28,7 @@
           />
           <input type="submit" class="button" />
         </form>
-        <div class="answer">
-          What do you call a fish wearing a bowtie?
-          <br />
-          Sofishticated
-        </div>
+        <div class="answer" id="answer"></div>
       </main>
       <footer>
         This AI project was coded by
