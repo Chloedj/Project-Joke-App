@@ -32,13 +32,23 @@ h1 {
 form {
     background-color: #fff;
     border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
+    
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     margin-bottom: 30px;
 }
-
+.form-group {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+   
+}
+.input-examples {
+    font-size: 12px;
+    color: #7a8aa2;
+    text-align: left;
+    margin-top: 10px;
+}
 .input {
     flex-grow: 1;
         margin-right: 10px;
