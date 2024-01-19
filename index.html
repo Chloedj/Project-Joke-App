@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>AI Dad Joke Generator</title>
   </head>
   <body>
@@ -23,12 +24,15 @@
           <input
             type="text"
             class="input"
+            id="input"
             placeholder="Enter a topic"
             required
           />
           <input type="submit" class="button" />
         </form>
-        <div class="answer" id="answer"></div>
+        <div class="answer" id="answer">
+          Why don't eggs tell jokes? Because they might crack up!
+        </div>
       </main>
       <footer>
         This AI project was coded by

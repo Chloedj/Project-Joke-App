@@ -1,11 +1,26 @@
-function generateJoke(event){
+let answerElement = document.querySelector("#answer");
+
+function generateJoke(event) {
     event.preventDefault();
 
-    let answerElement = document.querySelector("#answer");
-    answerElement.innerHTML = ""; 
+    
+    answerElement.innerHTML = "Generating..."; 
 
+    let inputElement = document.querySelector("#input");
+
+    let apiKey = "ab6f607t41943e02220ae3724eo64aeb";
+    let context = "you are an expert in dad jokes, the cheesier the better! Keep it clean though";
+    let prompt = `tell me a joke about ${inputElement.value}`;
+    let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+    axios.get(apiUrl)
+         .then(displayJoke)
+         .catch(error => console.error('Error fetching joke:', error));
+}
+
+function displayJoke(response) {
     new Typewriter(answerElement, {
-        strings: "What do you call a fish wearing a bowtie? Sofishticated",
+        strings: response.data.answer,
         autoStart: true,
         loop: false,
         delay: 13,
