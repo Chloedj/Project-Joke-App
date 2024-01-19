@@ -9,7 +9,7 @@ function generateJoke(event) {
     let inputElement = document.querySelector("#input");
 
     let apiKey = "ab6f607t41943e02220ae3724eo64aeb";
-    let context = "you are an expert in dad jokes, the cheesier the better! Keep it clean though";
+    let context = "you are an expert in hilarious dad jokes. Keep it clean though";
     let prompt = `tell me a joke about ${inputElement.value}`;
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
